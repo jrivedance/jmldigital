@@ -1,0 +1,321 @@
+body, img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.third {
+  width: 33.333%;
+  float: left;
+}
+.sixth {
+  width: 16.666%;
+  float: left;
+}
+.twothird {
+  width: 66.666%;
+  float: left;
+}
+.smtopbot {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.padleft {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.padcenter {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.padright {
+  padding-right: 20px;
+  padding-left: 10px;
+}
+a {
+  text-decoration: none;
+  color: #0066A2;
+}
+a:hover {
+  color: black;
+  cursor: pointer;
+}
+p {
+  font-size: 20px;
+  font-family: "Righteous";
+}
+h1 {
+  font-size: 50px;
+  font-family: "Righteous";
+}
+h2 {
+  font-size: 40px;
+  font-family: "Righteous";
+}
+h3 {
+  font-size: 75px;
+  font-family: "Righteous";
+}
+h4 {
+  font-size: 25px;
+  text-align: right;
+  font-family: "Righteous";
+}
+h5 {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Righteous";
+}
+.space {
+  height:100px;
+  clear: both;
+}
+.smspace {
+  height:20px;
+  clear: both;
+}
+.padd-left-twenty {
+padding-left: 20px;
+}
+.padd-twenty {
+padding-left: 20px;
+padding-right: 20px;
+}
+.padd-fifty {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+}
+.youtube-video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.youtube-video-container::after {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+    text-align: left;
+    padding:50px;
+}
+#inputarea {
+  width: 100%;
+  height: 100px;
+  font-size: 25px;
+  font-family: "Righteous";
+  background-color: rgb(236, 236, 236);
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+#input {
+  width: 100%;
+  height: 25px;
+  font-size: 30px;
+  font-family: "Righteous";
+  background-color: rgb(236, 236, 236);
+  border: none;
+  border-bottom: 2px solid black;
+  padding:10px;
+  margin-top:0px;
+  margin-bottom: 10px;
+}
+#check {
+  margin-top:0px;
+  margin-bottom: 30px;
+}
+label {
+    font-size: 30px;
+    font-family: "Righteous";
+}
+#error {
+  color: red;
+  font-family: "Righteous";
+  padding-bottom:20px;
+  padding-top:0px;
+  margin-top:0px;
+}
+.form-submit-button  {
+  background: #0066A2;
+  color: white; 
+  font-family: "Righteous";
+  height: 50px;   
+  width: 100px;   
+  font: bold 30px;
+  border:none;
+
+}
+
+.form-submit-button:hover {
+  background: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.form-reset-button {
+  background: #0066A2;
+  color: white; 
+  font-family: "Righteous";
+  height: 30px;   
+  width: 60px;   
+  font: 4px;
+  border:none;
+  float: right;
+}
+ 
+.form-reset-button:hover {
+  background: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-radius: .5px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#clabel {
+  position: relative;
+  padding-left: 30px;
+}
+
+#clabel::before {
+  content: '';
+  background: #0066A2;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  position:absolute;
+  left: 2px;
+  top:10px;
+
+  transform: scale(0) rotateZ(180deg);
+  transition: all 0.4s ;
+}
+
+input[type="checkbox"]:checked + #clabel::before {
+  transform: scale(1) rotateZ(0deg);
+}
+
+#clabel::after {
+  content: '';
+  border: 2px solid #000;
+  width:16px;
+  height: 16px;
+  position: absolute;
+  left: 2px;
+  top: 10px;
+}
+
+.backdrop {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+.thanks {
+  text-align: center;
+  margin-top:20%;
+  color: #ffff;
+}
+
+.imgcontainer {
+  position: relative;
+  background-color: #0066A2;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  color: white;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.imgcontainer:hover .image {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.imgcontainer:hover .middle {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .third, .twothird {
+      width: 100%;
+      padding:0;
+      margin:0;
+      padding-top: 10px;
+      margin-bottom: 10px;
+  }
+  .padd-left-twenty, .padleft, .padcenter, .padright {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+  }
+  form {
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 40px;
+  }
+  .sixth {
+    width: 33.33%;
+    margin-bottom:30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sixth {
+    width: 50%;
+    margin-bottom:30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sixth {
+    width: 100%;
+    margin-bottom:30px;
+  }
+}
