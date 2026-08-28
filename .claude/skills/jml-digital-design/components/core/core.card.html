@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Core" subtitle="Button, Panel, SectionLabel, Badge, StatCard, Skeleton" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Core</title><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:20px;background:#fff;font-family:var(--font-body)}.grid{display:flex;flex-wrap:wrap;gap:16px;align-items:center}.cap{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin:0 0 8px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.JMLDigitalDesignSystem_7e0556;
+function Icon({name,size=16,color="currentColor"}){const r=React.useRef(null);React.useEffect(()=>{if(window.lucide&&r.current){r.current.innerHTML="";const el=document.createElement("i");el.setAttribute("data-lucide",name);r.current.appendChild(el);window.lucide.createIcons({attrs:{width:size,height:size,stroke:color}});}},[name,size]);return <span ref={r} style={{display:"inline-flex",width:size,height:size}} />;}
+
+const {Button,Panel,SectionLabel,Badge,StatCard,Skeleton} = DS;
+function Card(){return (<div style={{display:"flex",flexDirection:"column",gap:22}}>
+<div><p className="cap">Button</p><div className="grid">
+<Button icon={<Icon name="arrow-right" />}>Book a Shoot</Button>
+<Button variant="secondary" iconPosition="start" icon={<Icon name="play-circle" />}>View Our Work</Button>
+<Button variant="ghost">Login</Button>
+<Button variant="solid" size="sm">Save</Button>
+<Button size="sm" disabled>Sending…</Button>
+</div></div>
+<div><p className="cap">Section label &amp; badges</p><div className="grid">
+<SectionLabel>What We Offer</SectionLabel>
+<Badge tone="warning">Unpaid</Badge><Badge tone="danger">3d overdue</Badge>
+<Badge>Due today</Badge><Badge tone="neutral">Note</Badge>
+<Badge tone="brandSolid" uppercase bordered={false}>For $1M+ listings</Badge>
+</div></div>
+<div><p className="cap">Panel &amp; stat card</p><div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:16}}>
+<StatCard label="Upcoming Shoots" value="7" icon={<Icon name="camera" color="#175282" />} />
+<StatCard label="August Revenue" value="$4,280" icon={<Icon name="trending-up" color="#175282" />} />
+<Panel hoverable padding="16px"><div style={{fontFamily:"var(--font-display)",fontSize:16}}>Hoverable panel</div><Skeleton height="10px" style={{marginTop:10}} /><Skeleton height="10px" width="60%" style={{marginTop:6}} /></Panel>
+</div></div>
+</div>);}
+ReactDOM.createRoot(document.getElementById("root")).render(<Card />);
+</script></body></html>

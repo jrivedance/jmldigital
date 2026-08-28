@@ -1,0 +1,37 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Navigation" subtitle="TopNav, SidebarNav, Tabs" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Navigation</title><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:20px;background:#fff;font-family:var(--font-body)}.grid{display:flex;flex-wrap:wrap;gap:16px;align-items:center}.cap{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin:0 0 8px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.JMLDigitalDesignSystem_7e0556;
+function Icon({name,size=16,color="currentColor"}){const r=React.useRef(null);React.useEffect(()=>{if(window.lucide&&r.current){r.current.innerHTML="";const el=document.createElement("i");el.setAttribute("data-lucide",name);r.current.appendChild(el);window.lucide.createIcons({attrs:{width:size,height:size,stroke:color}});}},[name,size]);return <span ref={r} style={{display:"inline-flex",width:size,height:size}} />;}
+
+const {TopNav,SidebarNav,Tabs,Logo,Button} = DS;
+function Card(){const [route,setRoute]=React.useState("/admin/orders");
+return (<div style={{display:"flex",flexDirection:"column",gap:18}}>
+<div style={{background:"var(--surface-raised)",borderRadius:16}}>
+<TopNav logo={<Logo height="24px" basePath="../../" />}
+  links={[{label:"Services",href:"#s"},{label:"Gallery",href:"#g"},{label:"About",href:"#a"},{label:"Pricing",href:"#p"},{label:"Contact",href:"#c"}]}
+  actions={<><a href="#l" style={{fontSize:12,color:"var(--text-faint)",textDecoration:"none"}}>Login</a><Button size="sm">Book a Shoot</Button></>} />
+</div>
+<div style={{display:"grid",gridTemplateColumns:"220px 1fr",gap:20}}>
+<SidebarNav activeHref={route} onNavigate={setRoute} items={[
+{label:"Dashboard",href:"/admin",icon:<Icon name="layout-dashboard" />},
+{label:"Orders",href:"/admin/orders",icon:<Icon name="shopping-cart" />},
+{label:"CRM",href:"/admin/crm",icon:<Icon name="users-2" />},
+{label:"Marketing",href:"/admin/marketing",icon:<Icon name="mail" />},
+{label:"Website",href:"/admin/website",icon:<Icon name="globe" />},
+{label:"Settings",href:"/admin/settings",icon:<Icon name="settings" />}]} />
+<Tabs tabs={[
+{id:"summary",label:"Summary",icon:<Icon name="file-text" />,panel:<div style={{fontSize:13,color:"var(--text-muted)"}}>Order summary panel</div>},
+{id:"media",label:"Media",icon:<Icon name="image" />,panel:<div style={{fontSize:13,color:"var(--text-muted)"}}>Media panel</div>},
+{id:"site",label:"Site Data",icon:<Icon name="globe" />,panel:<div/>},
+{id:"kit",label:"Marketing Kit",icon:<Icon name="megaphone" />,comingSoon:true}]} />
+</div>
+</div>);}
+ReactDOM.createRoot(document.getElementById("root")).render(<Card />);
+</script></body></html>

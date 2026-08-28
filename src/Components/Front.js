@@ -28,7 +28,7 @@ const Front = () => {
                 <div className="third">
                 <div className="padleft">
                     <a href="https://camilleabrown.org/" target="_blank" rel="noreferrer" >
-                    <motion.div whileHover={{scale: 1.1}} className="imgcontainer">
+                    <motion.div whileHover={{scale: 1.03}} className="imgcontainer">
                         <img src="images/CamilleSite.png" alt="Camille A. Brown Site" className="image"/>
                     <div className="middle">
                         <i className="material-icons">link</i> 
@@ -41,7 +41,7 @@ const Front = () => {
                 <div className="third">
                 <div className="padcenter">
                     <a href="http://rennieharrisinc.com/" rel="noreferrer" target="_blank">
-                    <motion.div whileHover={{scale: 1.1}} className="imgcontainer">
+                    <motion.div whileHover={{scale: 1.03}} className="imgcontainer">
                         <img src="images/RennieSite.png" alt="Rennie Harris Site" className="image"/>
                     <div className="middle">
                         <i className="material-icons md-48">link</i> 
@@ -54,7 +54,7 @@ const Front = () => {
                 <div className="third">
                 <div className="padright">
                     <a href="https://www.everybodymove.world/" rel="noreferrer" target="_blank">
-                    <motion.div whileHover={{scale: 1.1}} className="imgcontainer">
+                    <motion.div whileHover={{scale: 1.03}} className="imgcontainer">
                         <img src="images/EBMSite.png" alt="Every Body Move Site" className="image"/>
                     <div className="middle">
                         <i className="material-icons">link</i> 
@@ -66,7 +66,7 @@ const Front = () => {
 
             <div className="smspace"></div>
 
-                <motion.h5 whileHover={{scale: 1.1}} >
+                <motion.h5 whileHover={{scale: 1.03}} >
                     <a href="/websites" target="_blank">
                         See All Sites
                     </a>
@@ -118,7 +118,7 @@ const Front = () => {
 
             <div className="smspace"></div>
 
-                <motion.h5 whileHover={{scale: 1.1}} >
+                <motion.h5 whileHover={{scale: 1.03}} >
                     <a href="https://www.youtube.com/channel/UCaDK3YCbfM8KahzxzxsH6HQ" rel="noreferrer" target="_blank">
                         Watch More Videos
                     </a>

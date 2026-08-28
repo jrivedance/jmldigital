@@ -1,0 +1,34 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Forms" subtitle="TextField, FilterChip, Toggle" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Forms</title><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:20px;background:#fff;font-family:var(--font-body)}.grid{display:flex;flex-wrap:wrap;gap:16px;align-items:center}.cap{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin:0 0 8px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.JMLDigitalDesignSystem_7e0556;
+function Icon({name,size=16,color="currentColor"}){const r=React.useRef(null);React.useEffect(()=>{if(window.lucide&&r.current){r.current.innerHTML="";const el=document.createElement("i");el.setAttribute("data-lucide",name);r.current.appendChild(el);window.lucide.createIcons({attrs:{width:size,height:size,stroke:color}});}},[name,size]);return <span ref={r} style={{display:"inline-flex",width:size,height:size}} />;}
+
+const {TextField,FilterChip,Toggle} = DS;
+function Card(){const [f,setF]=React.useState("All Work");const [on,setOn]=React.useState({a:true,b:false});
+return (<div style={{display:"flex",flexDirection:"column",gap:20}}>
+<div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+<TextField id="n" label="Name" placeholder="Jane Realtor" />
+<TextField id="p" label="Phone" hint="optional" placeholder="(321) 555-0100" />
+</div>
+<div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+<TextField id="m" label="Message" multiline rows={3} placeholder="Tell us about the shoot you need..." />
+<TextField id="e" label="Email" defaultValue="jane@realty" error="That email or password isn't right. Try again." />
+</div>
+<div><p className="cap">Filter chips</p><div className="grid" style={{gap:8}}>
+{["All Work","Photography","Drone","Video","3D Tours"].map(l=>(<FilterChip key={l} active={f===l} onClick={()=>setF(l)}>{l}</FilterChip>))}
+</div></div>
+<div><p className="cap">Toggle</p><div className="grid" style={{gap:20}}>
+<span style={{display:"flex",alignItems:"center",gap:10,fontSize:14,color:"var(--ink-70)"}}><Toggle checked={on.a} onChange={v=>setOn({...on,a:v})} label="New booking" />New booking</span>
+<span style={{display:"flex",alignItems:"center",gap:10,fontSize:14,color:"var(--ink-70)"}}><Toggle checked={on.b} onChange={v=>setOn({...on,b:v})} label="Weekly digest" />Weekly digest</span>
+<span style={{display:"flex",alignItems:"center",gap:10,fontSize:14,color:"var(--text-faint)"}}><Toggle checked disabled label="Locked" />Disabled</span>
+</div></div>
+</div>);}
+ReactDOM.createRoot(document.getElementById("root")).render(<Card />);
+</script></body></html>

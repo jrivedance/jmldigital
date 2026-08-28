@@ -1,0 +1,16 @@
+:root{
+  --duration-fast:250ms; /* @kind other */
+  --duration-base:300ms; /* @kind other */
+  --duration-slow:500ms; /* @kind other */
+  --duration-reveal:600ms; /* @kind other */
+  --duration-crossfade:1000ms; /* @kind other */
+
+  --ease-out:cubic-bezier(0.16,1,0.3,1); /* @kind other */ /* the reveal easing used site-wide */
+  --ease-in-out:ease-in-out; /* @kind other */
+  --ease-standard:ease-out; /* @kind other */
+
+  --hover-lift:scale(1.03); /* @kind other */
+  --press-scale:scale(0.98); /* @kind other */
+
+  --reveal-offset:28px; /* RevealOnScroll y-offset */
+}

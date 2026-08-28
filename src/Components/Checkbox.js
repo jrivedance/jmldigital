@@ -18,7 +18,7 @@ function Checkbox(props) {
                 return (
                     
                     <React.Fragment key={option.key}>
-                        <motion.td whileHover={{scale:1.1}}>  
+                        <motion.td whileHover={{scale:1.03}}>  
                         <input
                             type='checkbox'
                             className='check'

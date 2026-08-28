@@ -108,7 +108,7 @@ function Footer () {
                     />
                 <br/>                   
                     <motion.button 
-                        whileHover={{scale: 1.1}}
+                        whileHover={{scale: 1.03}}
                         type='submit' 
                         className='form-submit-button'
                         disabled={!formik.isValid || formik.isSubmitting}
@@ -120,7 +120,7 @@ function Footer () {
                     </motion.button>
 
                     <motion.button 
-                        whileHover={{scale: 1.1}}
+                        whileHover={{scale: 1.03}}
                         type='reset' 
                         className='form-reset-button'
                     >
