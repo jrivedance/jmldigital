@@ -1,0 +1,22 @@
+:root{
+  --radius-sm:6px;
+  --radius-md:8px;    /* rounded-lg — icon buttons, small chips */
+  --radius-lg:12px;   /* rounded-xl — inputs, nav items, thumbnails */
+  --radius-xl:16px;   /* rounded-2xl — glass panels, nav bar */
+  --radius-pill:9999px;
+
+  --border-width:1px; /* @kind other */
+
+  /* Shadows */
+  --shadow-glass:0 8px 32px 0 rgba(16,24,40,0.08);
+  --shadow-glow-brand:0 0 40px -8px rgba(28,101,162,0.35);
+  --shadow-none:none;
+
+  /* Blur */
+  --blur-panel:24px;   /* backdrop-blur-xl */
+  --blur-scrim:4px;
+
+  /* The signature JML hexagon crop (flat-top hex, 7:6.13) */
+  --hex-clip:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%); /* @kind other */
+  --hex-ratio:7/6.13; /* @kind other */
+}

@@ -1,0 +1,8 @@
+/* Minimal element defaults. Components carry their own styling; this only
+   sets the page ground so any consumer page starts on-brand. */
+body{background:var(--background);color:var(--text-body);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--weight-regular);color:var(--text-strong);letter-spacing:var(--tracking-tight)}
+a{color:var(--brand-700);text-decoration:none;transition:color var(--duration-base) var(--ease-standard)}
+a:hover{color:var(--brand-800)}
+::selection{background:rgba(186,217,243,0.70);color:#000}
+*{border-color:var(--border-default)}

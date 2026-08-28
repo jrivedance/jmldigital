@@ -1,0 +1,4 @@
+/* Righteous is already loaded (as a Google Font) via the <link> tag in
+   Components/Header.js. Geist / Geist Mono are pulled from Google Fonts
+   here, matching how the source product loads them. */
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap");

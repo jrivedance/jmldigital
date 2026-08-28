@@ -1,0 +1,33 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Brand" subtitle="HexMedia, HexBadge, HexDivider, Logo, PatternField" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Brand</title><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:20px;background:#fff;font-family:var(--font-body)}.grid{display:flex;flex-wrap:wrap;gap:16px;align-items:center}.cap{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin:0 0 8px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.JMLDigitalDesignSystem_7e0556;
+function Icon({name,size=16,color="currentColor"}){const r=React.useRef(null);React.useEffect(()=>{if(window.lucide&&r.current){r.current.innerHTML="";const el=document.createElement("i");el.setAttribute("data-lucide",name);r.current.appendChild(el);window.lucide.createIcons({attrs:{width:size,height:size,stroke:color}});}},[name,size]);return <span ref={r} style={{display:"inline-flex",width:size,height:size}} />;}
+
+const {HexMedia,HexBadge,HexDivider,Logo,PatternField} = DS;
+function Card(){return (<div style={{display:"flex",flexDirection:"column",gap:18}}>
+<div className="grid" style={{alignItems:"flex-end"}}>
+<div style={{position:"relative"}}>
+  <HexMedia src="../../assets/images/drone/cover.png" alt="Drone" width="200px" />
+  <HexBadge value="68%" label="engagement" size="84px" style={{position:"absolute",right:-18,bottom:-10}} />
+</div>
+<HexMedia src="../../assets/images/photography/cover.png" alt="Photography" width="150px" />
+<div style={{display:"flex",flexDirection:"column",gap:10}}>
+  <Logo height="26px" basePath="../../" />
+  <div style={{background:"#000",padding:"10px 14px",borderRadius:8}}><Logo variant="wordmarkWhite" height="22px" basePath="../../" /></div>
+</div>
+</div>
+<HexDivider src="../../assets/images/JMLHex4.png" />
+<PatternField pattern="matrix" fade="corner" style={{borderRadius:16,border:"1px solid var(--border-hairline)",padding:20}}>
+  <div style={{fontFamily:"var(--font-display)",fontSize:20}}>PatternField</div>
+  <div style={{fontSize:13,color:"var(--text-muted)",marginTop:4}}>Accent texture, masked so it fades out.</div>
+</PatternField>
+</div>);}
+ReactDOM.createRoot(document.getElementById("root")).render(<Card />);
+</script></body></html>

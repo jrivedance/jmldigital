@@ -1,0 +1,71 @@
+:root{
+  /* ── Brand blue (tailwind.config.ts `brand`) ───────────────────────── */
+  --brand-50:#f2f8fd;
+  --brand-100:#e1eefa;
+  --brand-200:#bad9f3;
+  --brand-300:#8abfea;
+  --brand-400:#3c94dd;
+  --brand-500:#227bc3;
+  --brand-600:#1c65a2;
+  --brand-700:#175282;
+  --brand-800:#124168;
+  --brand-900:#0e314e;
+  --brand:#1c65a2;
+
+  /* ── Ink. The palette is black-on-white; "greys" are alpha blacks. ── */
+  --ink-1000:#000000;
+  --ink-80:rgba(0,0,0,0.80);
+  --ink-70:rgba(0,0,0,0.70);
+  --ink-65:rgba(0,0,0,0.65);
+  --ink-60:rgba(0,0,0,0.60);
+  --ink-50:rgba(0,0,0,0.50);
+  --ink-40:rgba(0,0,0,0.40);
+  --ink-30:rgba(0,0,0,0.30);
+  --ink-25:rgba(0,0,0,0.25);
+  --ink-10:rgba(0,0,0,0.10);
+  --ink-06:rgba(0,0,0,0.06);
+  --ink-05:rgba(0,0,0,0.05);
+  --ink-03:rgba(0,0,0,0.03);
+  --ink-02:rgba(0,0,0,0.02);
+
+  /* ── Surfaces ─────────────────────────────────────────────────────── */
+  --background:#ffffff;
+  --surface:#ffffff;
+  --surface-raised:#f7f9fc;
+  --surface-glass:rgba(255,255,255,0.70);
+  --surface-glass-strong:rgba(255,255,255,0.90);
+  --surface-scrim:rgba(0,0,0,0.90);
+
+  /* ── Semantic aliases ─────────────────────────────────────────────── */
+  --text-body:var(--ink-80);
+  --text-strong:var(--ink-1000);
+  --text-muted:var(--ink-60);
+  --text-subtle:var(--ink-40);
+  --text-faint:var(--ink-30);
+  --text-accent:var(--brand-700);
+  --text-on-brand:#ffffff;
+
+  --border-hairline:var(--ink-06);
+  --border-default:var(--ink-10);
+  --border-strong:rgba(0,0,0,0.20);
+  --border-accent:var(--brand-200);
+  --border-focus:rgba(34,123,195,0.50);
+
+  --surface-card:var(--surface-glass);
+  --surface-card-hover:var(--surface-glass-strong);
+  --surface-tint:var(--brand-50);
+  --surface-sunken:var(--ink-02);
+
+  /* ── Status ───────────────────────────────────────────────────────── */
+  --success-bg:#f0fdf4;--success-border:#bbf7d0;--success-fg:#16a34a;
+  --warning-bg:#fffbeb;--warning-border:#fde68a;--warning-fg:#b45309;--warning-icon:#f59e0b;
+  --danger-bg:#fef2f2;--danger-border:#fecaca;--danger-fg:#b91c1c;
+  --info-bg:var(--brand-50);--info-border:var(--brand-200);--info-fg:var(--brand-700);
+  --star:#fbbf24;
+
+  /* ── Gradients ────────────────────────────────────────────────────── */
+  --gradient-brand:linear-gradient(to right,var(--brand-600),var(--brand-700)); /* @kind other */
+  --gradient-brand-soft:linear-gradient(to bottom right,var(--brand-100),var(--brand-50)); /* @kind other */
+  --gradient-hex-badge:linear-gradient(to bottom right,var(--brand-600),var(--brand-800)); /* @kind other */
+  --gradient-photo-scrim:linear-gradient(to top,rgba(0,0,0,0.40),rgba(0,0,0,0) 55%,rgba(0,0,0,0.15)); /* @kind other */
+}

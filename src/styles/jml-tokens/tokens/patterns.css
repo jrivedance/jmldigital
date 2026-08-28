@@ -1,0 +1,36 @@
+/* Accent textures. These are decorative and deliberately quiet — they sit at
+   4–10% ink on white, behind content, never under body copy. Reference the
+   physical camera-wrap swatches the brand collects: hex "matrix" halftone and
+   circuit "electric" traces. The hexagon is also the brand's own shape
+   (see assets/images/JMLHex*.png and --hex-clip). */
+:root{
+  /* Hex-packed dot matrix — the default JML texture. These are image lists;
+     pair each with its -size and -position token (the shorthand form is not
+     a valid `background-image` value). */
+  --pattern-matrix:
+    radial-gradient(circle at 1.5px 1.5px,var(--ink-10) 1.5px,transparent 0),
+    radial-gradient(circle at 1.5px 1.5px,var(--ink-10) 1.5px,transparent 0); /* @kind other */
+  --pattern-matrix-size:16px 28px,16px 28px; /* @kind other */
+  --pattern-matrix-position:0 0,8px 14px; /* @kind other */
+  --pattern-matrix-fine:
+    radial-gradient(circle at 1px 1px,var(--ink-06) 1px,transparent 0),
+    radial-gradient(circle at 1px 1px,var(--ink-06) 1px,transparent 0); /* @kind other */
+  --pattern-matrix-fine-size:9px 16px,9px 16px; /* @kind other */
+  --pattern-matrix-fine-position:0 0,4.5px 8px; /* @kind other */
+  --pattern-matrix-brand:
+    radial-gradient(circle at 1.5px 1.5px,var(--brand-200) 1.5px,transparent 0),
+    radial-gradient(circle at 1.5px 1.5px,var(--brand-200) 1.5px,transparent 0); /* @kind other */
+  --pattern-matrix-brand-size:16px 28px,16px 28px; /* @kind other */
+  --pattern-matrix-brand-position:0 0,8px 14px; /* @kind other */
+
+  /* Hexagon outline mesh. */
+  --pattern-hex-mesh:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='93' viewBox='0 0 36 62'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='0.10'%3E%3Cpath d='M18 1 35 10.75v19.5L18 40 1 30.25v-19.5z'/%3E%3Cpath d='M0 32.75 17 42.5V62M36 32.75 19 42.5V62'/%3E%3C/g%3E%3C/svg%3E"); /* @kind other */
+
+  /* Circuit trace ("electric"). */
+  --pattern-circuit:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='0.10' stroke-width='1.25'%3E%3Cpath d='M0 16h24l16 16h24M16 0v24l16 16v24M64 8H48L36 20M0 48h12l10-10'/%3E%3C/g%3E%3Cg fill='%23000' fill-opacity='0.12'%3E%3Ccircle cx='24' cy='16' r='2.25'/%3E%3Ccircle cx='40' cy='32' r='2.25'/%3E%3Ccircle cx='16' cy='24' r='2.25'/%3E%3Ccircle cx='22' cy='38' r='2'/%3E%3C/g%3E%3C/svg%3E"); /* @kind other */
+  --pattern-circuit-brand:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%231c65a2' stroke-opacity='0.22' stroke-width='1.25'%3E%3Cpath d='M0 16h24l16 16h24M16 0v24l16 16v24M64 8H48L36 20M0 48h12l10-10'/%3E%3C/g%3E%3Cg fill='%231c65a2' fill-opacity='0.25'%3E%3Ccircle cx='24' cy='16' r='2.25'/%3E%3Ccircle cx='40' cy='32' r='2.25'/%3E%3Ccircle cx='16' cy='24' r='2.25'/%3E%3Ccircle cx='22' cy='38' r='2'/%3E%3C/g%3E%3C/svg%3E"); /* @kind other */
+
+  /* Standard fades applied to a texture so it never reads as wallpaper. */
+  --pattern-fade-down:linear-gradient(to bottom,#000 0%,transparent 85%); /* @kind other */
+  --pattern-fade-corner:radial-gradient(120% 100% at 100% 0%,#000 0%,transparent 70%); /* @kind other */
+}
